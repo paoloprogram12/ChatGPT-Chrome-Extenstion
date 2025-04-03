@@ -1,1 +1,24 @@
 
+{
+    "manifest_version": 3,
+    "name": "ChatGPT UI Enhancer",
+    "version": "1.0",
+    "description": "Enhance ChatGPT UI with additional features.",
+    "permissions": ["storage"],
+    "host_permissions": ["https://chat.openai.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://chat.openai.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    }
+  }
